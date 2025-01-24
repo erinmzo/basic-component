@@ -33,15 +33,15 @@ function Dropdown() {
   }, []);
 
   return (
-    <div ref={dropdownRef} className="w-[105px]">
+    <div ref={dropdownRef} className="relative w-[105px]">
       <button
-        className="w-[105px] py-2 px-4 border border-amber-400 bg-amber-300 font-bold rounded-lg"
+        className=" w-[105px] py-2 px-4 border border-amber-400 bg-amber-300 font-bold rounded-lg"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         {selectedOption}
       </button>
       {isOpen && (
-        <ul className="w-[105px]">
+        <ul className="absolute left-0 top-[48px] w-[105px]">
           {OPTIONS.map((option) => (
             <li
               className="py-2 px-4 bg-amber-200 first:rounded-t-lg last:rounded-b-lg hover:bg-sky-300"
